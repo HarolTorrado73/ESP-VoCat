@@ -1,0 +1,848 @@
+7/7/26, 21:55
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+página delantera / Plaza de código abierto / Detalles del proyecto
+Versión profesional
+Serie ESP
+Base giratoria ESP-VoC…
+WiFi/Ethernet
+4.1w 112 305 97
+Diseño de bricolaje
+Introducción:La base ESP-VoCat Meow Companion está diseñada específicamente para
+el kit de desarrollo Meow Companion. Integra el ESP32-C61, un motor
+rotatorio y un magnetómetro para lograr funciones de rotación, detección
+táctil basada en CSI y conmutación magnética, lo que proporciona una
+experiencia de detección e interacción más flexible y natural.
+Precio de la réplica: 40 yenes
+Licencia de código abierto:GPL 3.0
+Hora de creación: 2025-11-24 22:35:31
+Actualizado: 2026-04-02 01:53:09
+describir
+Base giratoria ESP-VoCat Meow Companion
+Vídeos de Bilibili | 
+Repositorio de código fuente | 
+Tutorial de réplica
+https://oshwhub.com/esp-college/esp-echoear-base
+1/32
+7/7/26, 21:55
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Descripción general del proyecto
+La base giratoria ESP-VoCat Meow Companion es una base giratoria inteligente diseñada a medida
+para el kit de desarrollo ESP-VoCat Meow Companion , específicamente para productos que
+requieren capacidades de interacción por voz a gran escala, como juguetes, altavoces inteligentes y
+sistemas de control central inteligentes. El dispositivo utiliza el módulo ESP32-C61-WROOM-1,
+admite alimentación USB tipo C y también puede alimentar la unidad ESP-VoCat mediante un
+conector magnético.
+Este proyecto logra funciones esenciales como el control de motores paso a paso de alta
+precisión , la detección de eventos de interruptores deslizantes magnéticos , la detección de
+CSI y una comunicación UART estable. Además, puede ajustar automáticamente su orientación
+según los resultados de localización de la fuente sonora de ESP-VoCat, lo que permite una
+rotación inteligente hacia la fuente de sonido. Al combinar el control de movimiento con la
+detección de la fuente sonora, proporciona una experiencia de interacción humano-computadora
+más natural e inmersiva .
+Presentación de vídeos
+¡Meow Companion ha sido completamente actualizado! La base giratoria desbloquea aún más
+funcionalidades y experiencias novedosas.
+Versión de hardware
+1. 
+Se lanza por primera vez la versión 1.0.0 .
+https://oshwhub.com/esp-college/esp-echoear-base
+2/32
+7/7/26, 21:56
+esp-vocat-base
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Versión del software
+El código base está disponible en el repositorio de Gitee : 
+ESP-VoCat-Xiaozhi
+El código de Xiaozhi para la cabeza del gato acompañante está disponible en el repositorio
+Gitee : 
+Plan de actualización de la versión del software:
+tiempo
+5 de diciembre
+Pendiente
+Versión
+V0.1.0
+Versiones
+contenido
+Reconocimiento de la fuente sonora (posicionamiento + dirección) para movimientos
+de balanceo que siguen los ritmos de los tambores;
+accionamiento deslizante magnético (para despertar);
+movimiento de frotamiento del gato.
+El temporizador Pomodoro ofrece funcionalidad completa (temporizador,
+recordatorios),
+control de interfaz de usuario,
+posteriores
+Versión del modelo 3D
+control por voz e integración
+con el sensor de movimiento CSI .
+1. v1.0.0
+Modelo 3D Base de Compañero Cat
+Demostración de funcionamiento
+La base ESP-VoCat utiliza el módulo Espressif ESP32-C61-WROOM-1-N8R2 , comunicándose con
+la unidad ESP-VoCat a través del puerto serie mediante un protocolo UART personalizado.
+Mecánicamente, la base está equipada con un motor paso a paso 24BYJ48, que permite el
+reconocimiento de la fuente de sonido y diversos movimientos de rotación predefinidos para
+mejorar la experiencia interactiva.
+Además, la base ESP-VoCat incorpora un interruptor deslizante magnético que desbloquea aún más
+funciones interactivas.
+https://oshwhub.com/esp-college/esp-echoear-base
+3/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Identificación de la fuente sonora
+ESP-VoCat admite el reconocimiento de fuentes sonoras, lo que permite la detección en tiempo real
+de la dirección y la ubicación de los sonidos en el entorno. El sistema capta las señales sonoras
+mediante una matriz de micrófonos, las analiza junto con información como la intensidad y la fase
+del sonido, y determina el acimut de la fuente sonora. Combinado con una base giratoria
+ultrasilenciosa basada en un motor paso a paso, permite una interacción inteligente con la fuente
+sonora.
+Múltiples acciones preestablecidas
+La base giratoria permite realizar diversas acciones predefinidas.
+Movimiento de sacudida de cabeza
+: Este movimiento hace que la base mueva suavemente la cabeza del gato de un lado a otro,
+simulando los gestos curiosos o sutiles de un felino.
+https://oshwhub.com/esp-college/esp-echoear-base
+4/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Mirada curiosa:
+La acción "Mirada curiosa" hace que la base mueva al gato acompañante para que mire a
+izquierda y derecha, con ligeros desplazamientos aleatorios, simulando el comportamiento
+natural de un gato que observa su entorno .
+Ritmo de tambor: El
+movimiento rítmico de tambor permite que el ESP-VoCat mueva su cabeza hacia la izquierda y
+hacia la derecha en respuesta al ritmo de la música externa, creando un efecto interactivo
+sincronizado con la música .
+https://oshwhub.com/esp-college/esp-echoear-base
+5/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+El suave roce
+simula el delicado movimiento de un gato: la base gira lentamente hacia la izquierda y luego
+regresa al centro, repitiendo el movimiento varias veces. El movimiento es fluido y natural, y
+cada pausa realza la sensación de realismo y suavidad .
+Notas importantes:
+Todos los movimientos son parametrizables , lo que facilita la integración con modelos
+grandes como Doubao y Xiaozhi
+. Para garantizar una ejecución óptima del movimiento, el control del motor de la base presenta
+las siguientes características:
+Control preciso del ángulo: Permite la rotación en cualquier ángulo con una precisión de
+hasta 0,1 grados, lo que facilita la identificación de la fuente sonora.
+Aceleración y desaceleración suaves: Emplea algoritmos de aceleración y desaceleración
+para una rotación más natural y fluida.
+https://oshwhub.com/esp-college/esp-echoear-base
+6/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Calibración automática de la posición inicial:
+Dado que la base giratoria ESP-VoCat es accionada por un motor paso a paso, no hay
+retroalimentación angular. Por lo tanto, la base realizará una calibración de la posición cero
+al encenderse. El proceso de calibración es el siguiente:
+1. Tras encenderlo, el motor girará automáticamente hacia la izquierda para encontrar el
+interruptor de límite.
+2. Cuando se activa el interruptor de límite, el motor girará 95° a la derecha hasta la posición
+central.
+3. Tras la calibración, se apaga el motor.
+Control interactivo mediante interruptor deslizante magnético
+La base ESP-VoCat permite diversos controles interactivos mediante un interruptor deslizante
+magnético. La posición del interruptor modifica la intensidad del campo magnético alrededor del
+sensor geomagnético, y la base detecta el movimiento del interruptor monitorizando estos cambios
+en tiempo real. Cuando se detecta un cambio de posición, la base notifica el evento
+correspondiente al ESP-VoCat a través del puerto serie, proporcionando así una experiencia
+interactiva completa e intuitiva.
+Admite 7 tipos de detección de eventos de interruptores deslizantes magnéticos:
+El control deslizante se mueve de arriba hacia abajo (SLIDE_DOWN).
+Desliza el control deslizante hacia arriba (SLIDE_UP)
+Retire el control deslizante de la posición superior (REMOVE_FROM_UP)
+Retire el control deslizante de la posición inferior (REMOVE_FROM_DOWN)
+Coloca el control deslizante en la posición superior (PLACE_FROM_UP).
+Coloca el control deslizante en la posición inferior (PLACE_FROM_DOWN).
+Cuando el control deslizante está en la posición inferior, se puede reconocer adicionalmente
+una acción de clic (SINGLE_CLICK): basándose en la detección de cambios en los datos del eje
+mag_x, combinados con la relación entre mag_x y mag_y, para evitar la activación accidental de
+acciones de deslizamiento.
+Evento de alimentación de peces (FISH_ATTACHED): Detecta cambios en el campo magnético
+específico cuando se colocan peces pequeños en la parte superior.
+Modo de emparejamiento: Se colocan dos ESP-VoCats uno frente al otro para su
+emparejamiento y conexión en red.
+https://oshwhub.com/esp-college/esp-echoear-base
+7/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+La función de control mediante interruptor deslizante magnético admite múltiples sensores :
+Sensor geomagnético triaxial BMM150
+Sensor geomagnético triaxial QMC6309
+Sensor Hall lineal
+Aviso:
+1. Puede elegir cualquiera de los tres sensores mencionados anteriormente ; el BMM150 es el
+predeterminado . Al usar un sensor Hall lineal, solo se admiten dos eventos: deslizador hacia
+arriba/abajo (SLIDE_UP / SLIDE_DOWN).
+2. Antes de usar esta función por primera vez, el interruptor deslizante magnético debe calibrarse
+para adaptarse al entorno del campo magnético, registrando los valores de intensidad del
+campo magnético de referencia cuando se encuentra en los estados superior, inferior o
+retirado . Los datos de calibración se almacenarán de forma permanente en la memoria flash
+NVS. La recalibración puede activarse durante el uso enviando un comando serial a través de
+ESP-VoCat o manteniendo pulsado el botón de arranque en la base.
+Basándose en los resultados de detección del sensor geomagnético y combinándolo con el
+algoritmo de juicio de acciones, la base puede reconocer siete tipos de acciones.
+Función de detección CSI
+Meow Companion puede detectar cambios en el entorno a través de Wi-Fi CSI (Información del
+estado del canal) para activar acciones o interactuar con el entorno.
+Detección de movimiento:
+Al obtener la información CSI del enrutador a través de Miaoban, se puede detectar el
+https://oshwhub.com/esp-college/esp-echoear-base
+8/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+movimiento de cuerpos humanos en todo el entorno espacial, lo que permite la detección de
+movimiento humano y el análisis de datos estadísticos.
+Detección de campo cercano:
+Mediante el intercambio de paquetes de datos entre el dispositivo auxiliar y la base, se puede
+controlar la ruta de transmisión Wi-Fi, logrando una detección de alta precisión en un área
+reducida. Por ejemplo, al detectar la aproximación de un dedo humano, la base puede ajustar
+automáticamente su postura o realizar una acción predefinida, lo que resulta en una experiencia
+interactiva más inteligente.
+Comunicación en serie
+La base giratoria ESP-VoCat puede comunicarse con el ESP-VoCat a través del protocolo UART .
+Tipo de comando :
+Comando de control de ángulo (CMD_BASE_ANGLE_CONTROL)
+Comando de control de acción preestablecido (CMD_BASE_ACTION_CONTROL)
+Notificación de finalización de acción preestablecida (CMD_ACTION_COMPLETE)
+Informe de eventos de interruptor magnético (CMD_MAGNETIC_SWITCH_EVENT)
+Sincronización del progreso de la calibración de datos magnéticos (MAG_SWITCH_CALIB_*)
+Nota: Actualmente solo están disponibles los tipos de comandos básicos mencionados
+anteriormente. Los comandos relacionados con CSI se añadirán más adelante.
+Formato del marco de datos :
+AA 55 [LEN_H] [LEN_L] [CMD] [DATA...] [CHECKSUM]
+Mecanismo de verificación :
+Verificación del encabezado del marco
+Validación y verificación
+Requisitos de hardware
+https://oshwhub.com/esp-college/esp-echoear-base
+9/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Chip de control principal
+Módulo ESP32-C61-WROOM-1 o ESP32-C61-WROOM-1U
+El valor predeterminado es ESP32-C61-WROOM-1.
+Conexiones periféricas y asignación de pines
+Motor paso a paso (28BYJ-48 + circuito integrado controlador ULN2003)
+IN1 → GPIO28
+IN2 → GPIO27
+IN3 → GPIO26
+IN4 → GPIO25
+Sensor magnetómetro (I2C)
+SCL → GPIO3
+SDA → GPIO2
+Compatible con BMM150 (dirección I2C: 0x10)
+Compatible con QMC6309 (dirección I2C: 0x7C)
+Sensor de efecto Hall lineal (ADC)
+ADC_PIN → GPIO5 (ADC_CHANNEL_3)
+Interruptor de límite de calibración de retorno cero del plato giratorio
+Pin de detección del interruptor de límite de calibración de punto cero → GPIO1 (activo
+bajo)
+Botón de arranque
+Botón BOOT → GPIO9 (activo bajo)
+La función predeterminada es mantener pulsado para calibrar el interruptor deslizante
+magnético.
+comunicación UART
+TXD → GPIO29
+RXD → GPIO8
+Velocidad de transmisión: 115200
+https://oshwhub.com/esp-college/esp-echoear-base
+10/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Instrucciones de uso
+Primer lanzamiento
+1. Calibración del ángulo base :
+Tras encenderlo, el motor girará automáticamente hacia la izquierda para encontrar el
+interruptor de límite.
+Cuando se activa el interruptor de límite, el motor girará 90° a la derecha hasta la posición
+central.
+Tras la calibración, se apaga el motor.
+2. Calibración del interruptor magnético (si es el primer uso):
+El sistema detecta automáticamente la primera posición estable (manteniendo el
+deslizador inmóvil durante aproximadamente 500 ms).
+Una vez que el sistema registre la primera posición, mostrará el siguiente mensaje: First
+position calibrated
+Mueva el control deslizante a una segunda posición diferente (arriba/abajo/eliminar) y el
+sistema detectará automáticamente la estabilidad.
+Tras registrar la segunda ubicación, el sistema la envía 0x12 a ESP-VoCat para notificar que
+la calibración de la segunda ubicación se ha completado.
+Mueva el control deslizante a una tercera posición diferente y el sistema detectará
+automáticamente la estabilidad.
+Una vez que el sistema registra la tercera ubicación, la clasifica automáticamente y la
+asigna a REMOVED/UP/DOWN según la intensidad del campo magnético.
+Una vez finalizada la calibración 0x13 , envíe una notificación a ESP-VoCat para indicar que
+la calibración ha terminado.
+Los datos de calibración se guardan automáticamente en la memoria Flash y se cargan
+automáticamente en el siguiente arranque.
+Aviso :
+Cada posición debe permanecer inmóvil y esperar a que el sistema detecte
+automáticamente la estabilidad (aproximadamente 500 ms).
+La diferencia en los campos magnéticos en las tres ubicaciones debe ser mayor que 100 (el
+sistema lo determinará automáticamente).
+Los datos cambian normalmente durante el movimiento; el sistema esperará
+automáticamente a que se estabilicen antes de grabar.
+https://oshwhub.com/esp-college/esp-echoear-base
+11/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Recalibrar
+Método 1: Mantenga pulsado el botón de arranque.
+Mantén pulsado el botón de arranque en GPIO9 durante aproximadamente 1,5 segundos.
+El sistema entra automáticamente en modo de recalibración.
+Método 2: Comandos del puerto serie
+ESP-VoCat envía comandos AA 55 00 03 03 00 10 16 a la base de acoplamiento.
+Tras recibir la orden, el sistema entra en modo de recalibración.
+Comandos del puerto serie
+1. Comando de control de ángulo (0x01)
+Formato : AA 55 00 03 01 [ANGLE_H] [ANGLE_L] [CHECKSUM]
+Ejemplo : Girar a 45°
+AA 55 00 03 01 00 2D 31
+00 2D = 45 (decimal)
+31 = 01 + 00 + 2D (Suma de verificación)
+2. Comandos de control de movimiento (0x02)
+Formato : AA 55 00 03 02 00 [ACTION] [CHECKSUM]
+Código de acción :
+0x01 Sacudir la cabeza (SHAKE_HEAD)
+0x02 Mirando alrededor (LOOK_AROUND)
+0x03 Sigue el ritmo del tambor - Batería (BEAT_SWING_DRUM)
+0x04 Gato frotándose contra mi mano (CAT_NUZZLE)
+0x05 Sigue el ritmo de la batería - otros instrumentos (BEAT_SWING_OTHER)
+Ejemplo : Realizar la acción de mirar a la izquierda y a la derecha.
+AA 55 00 03 02 00 02 04
+https://oshwhub.com/esp-college/esp-echoear-base
+12/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+3. Notificación de eventos de interruptor magnético (0x03)
+Formato : AA 55 00 03 03 00 [EVENT] [CHECKSUM]
+Código del evento :
+0x01 Desliza el control deslizante hacia abajo (SLIDE_DOWN)
+0x02 Desliza el control deslizante hacia arriba (SLIDE_UP)
+0x03 Elimínelo de arriba (REMOVE_FROM_UP)
+0x04 Elimínelo desde abajo (REMOVE_FROM_DOWN)
+0x05 Colocar desde arriba (PLACE_FROM_UP)
+0x06 :Colócalo de nuevo desde abajo (PLACE_FROM_DOWN)
+0x07 Evento de clic (SINGLE_CLICK)
+0x08 Evento de alimentación de peces (FISH_ATTACHED): se activa cuando se coloca un pez
+pequeño desde la posición superior.
+0x09 Modo de emparejamiento: exposición prolongada a un campo magnético específico.
+0x10 Inicie el procedimiento de calibración de datos.
+0x11 Notificación de inicio de calibración
+0x12 La calibración de la segunda posición ha finalizado (el usuario recibirá una indicación de
+voz para el tercer paso).
+0x13 Calibración completada
+4. Notificación de finalización de acción (0x02)
+Formato : AA 55 00 03 02 00 10 12
+La base envía automáticamente después de realizar cualquier acción específica.
+La cabeza puede sincronizar su estado según esta orden.
+Especificaciones de diseño de circuitos de hardware
+Diseño del circuito de hardware básico
+Diseño de circuitos de hardware de la placa base
+El hardware base del ESP-VoCat incluye principalmente gestión de energía, MCU, sensor
+geomagnético, sensor Hall y controlador de motor. El diagrama de bloques general del hardware es
+el siguiente:
+https://oshwhub.com/esp-college/esp-echoear-base
+13/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Método de suministro de energía
+La ESP-VoCat-Base admite alimentación USB Tipo-C a 5 V. También incluye un conector
+magnético para alimentar la unidad principal ESP-VoCat. Internamente, la ESP-VoCat-Base
+utiliza un circuito CC-CC para convertir la tensión de 5 V a 3,3 V y alimentar así el chip de control
+principal ESP32-C61 y los circuitos periféricos.
+Abra el dibujo de diseño
+Medidas de limitación de corriente: Al alimentar la unidad principal ESP-VoCat, se utiliza un chip
+TPS2051BDBVR para limitar la corriente a 500 mA.
+https://oshwhub.com/esp-college/esp-echoear-base
+14/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Control del motor paso a paso
+La base ESP-VoCat-Base utiliza un motor paso a paso para controlar la rotación de la base, con el
+chip controlador ULN2003A . El ULN2003A es un chip de matriz Darlington de alta tensión y alta
+corriente que contiene siete pares Darlington de colector abierto con emisor común, comúnmente
+utilizado para el control de motores paso a paso. El modelo de motor paso a paso es 24BYJ48 , un
+motor paso a paso con engranajes y reductor interno. El método de control es de cuatro fases y
+ocho pasos, utilizando una fuente de alimentación de 5 V CC.
+El circuito de control del motor paso a paso de la base ESP-VoCat-Base es el siguiente:
+Interfaz de expansión para LED RGB
+La ESP-VoCat-Base proporciona una interfaz para tiras LED WS2812B , que se puede conectar a una
+tira LED RGB WS2812B para lograr escenarios que requieren efectos de iluminación RGB, como
+luces temáticas musicales. El circuito de conversión de nivel es el siguiente:
+https://oshwhub.com/esp-college/esp-echoear-base
+15/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+sensor
+Sensores geomagnéticos: La ESP-VoCat-Base dispone de puntos de soldadura reservados para los
+sensores geomagnéticos triaxiales BMM150 y QMC6309 , utilizados principalmente para la
+detección de interruptores deslizantes magnéticos . Ambos se comunican con el chip de
+control principal mediante el protocolo I2C, y los usuarios pueden elegir uno. La ESP-VoCat
+Base utilizará el sensor BMM150 por defecto .
+El circuito periférico para el BMM150 es el siguiente:
+El circuito periférico para QMC6309 es el siguiente:
+Sensor Hall lineal: La placa ESP-VoCat-Base está equipada con un sensor Hall lineal SS49E , que se
+puede utilizar para detectar la intensidad del campo magnético. El sensor SS49E utiliza una salida
+analógica. El chip de control principal ESP32-C61-WROOM-1 utiliza un convertidor analógico
+digital (ADC) para obtener los datos del sensor. El circuito periférico es el siguiente:
+Radar de detección de presencia humana: La placa ESP-VoCat-Base dispone de una interfaz
+reservada para el radar de detección de presencia humana LD2402 , que puede utilizarse para
+https://oshwhub.com/esp-college/esp-echoear-base
+16/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+implementar funciones como la detección de presencia humana. El LD2402 se comunica con el chip
+de control principal mediante UART. El circuito periférico es el siguiente:
+Interfaz de protocolo I2C: La ESP-VoCat-Base cuenta con una interfaz de protocolo I2C, que puede
+utilizarse para conectar dispositivos adicionales compatibles con dicho protocolo. El circuito
+periférico es el siguiente:
+Diseño de circuitos de hardware de la placa hija
+La base ESP-VoCat se conecta al cuerpo principal de ESP-VoCat mediante una placa secundaria
+montada en el rodamiento del motor paso a paso. Esta placa secundaria utiliza interruptores de
+límite para calibrar el ángulo del motor paso a paso.
+Tutorial de réplica
+Por favor, prepare los siguientes materiales y componentes antes del montaje:
+https://oshwhub.com/esp-college/esp-echoear-base
+17/32
+Número de serie describir
+1 Carcasa exterior impresa en 3D
+2 Cubierta inferior de la carcasa exterior impresa en 3D
+3 Cubierta para tocadiscos impresa en 3D
+4 Tapa inferior del tocadiscos impresa en 3D
+5 Placa base ESP-VoCat
+6 Placa base ESP-VoCat
+7 Motor paso a paso 24BYJ48
+8 Interruptor deslizante magnético impreso en 3D
+9 Cable terminal SH1.0mm paso 5P
+10 Imán circular, D10×1,5 mm
+11 Imán circular D6×5 mm
+12 Diámetro interior 7 mm, diámetro exterior 11 mm, altura 3 mm, rodamiento
+13 Tornillos M4×5mm
+14 Tornillos M2×4mm
+15 Tornillos M2×3mm
+7/7/26, 21:56 ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+https://oshwhub.com/esp-college/esp-echoear-base 18/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Aspectos a tener en cuenta al lanzar:
+1. Seleccione un espesor de placa de 1,0 mm.
+2. Ambos sensores geomagnéticos utilizan encapsulados WLCSP , que son relativamente difíciles
+de soldar. Quienes se inicien en la soldadura pueden considerar la opción de servicios SMT.
+También hay recursos relacionados disponibles en la tienda en línea de LCSC.
+Precauciones para soldar placas base:
+Al soldar el conector magnético macho en la placa secundaria, preste atención a la orientación. ¡ El
+extremo marcado en rojo debe estar en el mismo lado que el círculo blanco en la PCB !
+V1.0.0 Conjunto de hardware de base giratoria
+La base giratoria ESP-VoCat consta de dos placas de circuito , una placa principal (MainBoard) y
+una placa secundaria (SubBoard) , conectadas a un motor paso a paso 24BYJ48 . La placa
+https://oshwhub.com/esp-college/esp-echoear-base
+19/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+principal y la secundaria están conectadas mediante un cable plano de 5 pines y paso de 1,0 mm
+. El motor paso a paso está conectado a la placa principal mediante el cable plano .
+Pasos de montaje :
+1. Al ensamblar dos imanes circulares D10×1,5 mm en el interior de la carcasa impresa en 3D ,
+se debe prestar especial atención a la polaridad de los imanes.
+2. El rodamiento en miniatura, con un diámetro interior de 7 mm, un diámetro exterior de 11
+mm y una altura de 3 mm , se ensambla en una ranura dentro de la carcasa impresa en 3D
+para garantizar un montaje adecuado del rodamiento.
+3. Instale el motor paso a paso 24BYJ48 dentro de la carcasa impresa en 3D y fíjelo con dos
+tornillos M4×5mm . Debido a las tolerancias de montaje, no es necesario apretar
+completamente los tornillos en este momento. Apriételos después de instalar la plataforma
+giratoria en el eje del motor.
+https://oshwhub.com/esp-college/esp-echoear-base
+20/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+4. Instale la placa de circuito ESP-VoCat-Base-SubBoard en la cubierta inferior de , asegurándose
+de que los orificios para los tornillos estén alineados.
+5. Instale la cubierta superior del plato giratorio de impresión 3D sobre la cubierta y fíjela en la
+parte posterior con dos tornillos M2×3mm .
+6. Inserte el cable terminal SH1.0mm de 5 pines en la interfaz del tocadiscos.
+https://oshwhub.com/esp-college/esp-echoear-base
+21/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+7. Instale el plato giratorio ensamblado en el eje del motor paso a paso , asegurándose de que
+la superficie del plato quede aproximadamente al ras con la carcasa exterior. En este punto,
+apriete los tornillos del motor.
+8. Fije la placa base ESP-VoCat-Base-MainBoard a la cubierta utilizando dos tornillos M2×4mm
+.
+9. Inserte el cable plano del motor paso a paso en el conector del motor de la placa base
+(conector en ángulo recto, marcado con el logotipo de Motor) e inserte el cable plano de la
+placa secundaria en el conector de la placa secundaria de la placa base (conector recto, sin
+https://oshwhub.com/esp-college/esp-echoear-base
+22/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+marcar). Nota: El cable plano de 5 pines y 1.0 mm debe tener ambos extremos apuntando
+en la misma dirección. ¡Verifique la conexión antes de insertarlo para evitar cortocircuitos
+y daños a la placa!
+10. Instale el imán circular D6×5mm en la ranura del interruptor deslizante magnético impreso
+en 3D (tenga en cuenta la polaridad del imán; debe atraer al imán D10×1.5mm). Luego,
+colóquelo sobre la base giratoria Miaoban; el interruptor se acoplará automáticamente.
+Finalmente, encienda la base giratoria y actualice el firmware. Compruebe si la base giratoria
+realiza correctamente el procedimiento de calibración automática al centro . Si es así, la
+instalación de la base giratoria ESP-VoCat está completa.
+Lista de materiales
+Lista de materiales base de ESP-VoCat
+ESP32-C61-WROOM-1-N8R2
+Sensor inteligente de detección de micromovimientos humanos LD2402
+https://oshwhub.com/esp-college/esp-echoear-base
+23/32
+7/7/26, 21:56
+BMM150 , 
+QMC6309
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Sensor geomagnético triaxial -- 
+Conector magnético pogopin: conector macho de 4 pines y 2,5 mm con oreja.
+Cable de conexión de la placa secundaria: cable terminal SH de 1,0 mm de paso y 5 pines, de
+doble extremo, 60 mm en la misma dirección.
+Motor paso a paso -- Motor paso a paso con engranajes 24BYJ48 DC 5V
+Imán redondo -- D6×5mm , seleccione 6 mm de diámetro x 5 mm de grosor (1 pieza)
+Imán redondo -- D10×1,5 mm , seleccione 10 mm de diámetro x 1,5 mm de grosor (1 pieza)
+Rodamientos en miniatura: interior 7, exterior 11, altura 3
+Puedes optar por imprimir tú mismo la carcasa en 3D o utilizar el servicio de impresión de
+JLCPCB.
+grupo de intercambio técnico
+Si encuentra algún problema durante el proceso de replicación, le invitamos a unirse al grupo
+oficial de intercambio técnico para debatir y resolver problemas con otros desarrolladores en
+tiempo real.
+Grupo 0 (Completo): 813935663
+Grupo 1 (completo): 1032430870
+Grupo 2 (completo): 939405364
+Grupo 3 (completo): 480486715
+Grupo 4 (completo): 807521569
+Grupo 5: 1054806943
+Método de compra
+Actualmente, vendedores externos ofrecen productos terminados o piezas individuales. Si no
+quieres fabricarlo tú mismo, puedes buscar directamente "Base Miaoban" en Taobao para
+comprarlo.
+Base de compañía para gatos Cyber  Smart
+Soporte para gatos con inteligencia artificial
+https://oshwhub.com/esp-college/esp-echoear-base
+24/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Preguntas frecuentes
+P1: El motor vibra o no gira
+Compruebe que la fuente de alimentación sea suficiente (al menos 5V 1A).
+Comprueba que el cableado sea correcto.
+Comprueba si existe alguna resistencia que impida la rotación del plato giratorio.
+Intenta reducir la velocidad (aumentando speed_us el parámetro) .
+P2: Falló la calibración del interruptor magnético.
+Asegúrese de que la conexión I2C del sensor sea normal.
+Compruebe que la configuración del tipo de sensor coincida.
+Al mover el control deslizante, realice movimientos precisos y espere a que aparezca un
+indicador de estabilización antes de moverlo.
+Al moverse lentamente, compruebe si el mecanismo del período de estabilización se ha
+optimizado.
+P3: Error de comunicación serial
+Compruebe si la velocidad de transmisión es de 115200 baudios.
+Confirme que el cableado TX/RX sea correcto.
+Compruebe si la suma de verificación se ha calculado correctamente.
+Si encuentras algún problema después de la reedición, ¡no dudes en comentarlo y señalarlo!
+Dibujos de diseño
+Placa base ESP-VoCat-V1_0
+Diagrama esquemático
+Placa base ESP-VoCat-SubBoard-V1_0
+https://oshwhub.com/esp-college/esp-echoear-base
+25/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+tarjeta de circuito impreso
+Lista de materiales
+IDENTIFICACIÓN
+1
+Nombre
+10uF
+2
+100 nF
+3
+1uF
+https://oshwhub.com/esp-college/esp-echoear-base
+Descarga de la lista de materiales
+Designante
+C3, C1, C8
+Huella
+C0603
+C4,C2,C10,C11,C12,C13,C14,C5,C6
+C0402
+C9
+C0402
+PCB-ESP-VoCat
+Hacer un pedido en el cent
+Cantidad
+3
+Pieza del fab
+CL10A106K
+9
+CL05B104K
+1
+CL05A105K
+26/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+IDENTIFICACIÓN
+4
+Nombre
+10 kΩ
+Designante
+R3, R6, R10, R11
+Huella
+R0402
+5
+4,7 kΩ
+R8, R9
+R0402
+Modelo 3D
+Número de serie
+Expandir
+Nombre del archivo
+No hay datos disponibles.
+Cantidad
+4
+Pieza del fab
+0402WGF1
+2
+0402WGF4
+Número de descargas
+apéndice
+Número de serie
+Nombre del archivo
+No hay datos disponibles.
+Número de descargas
+Proyecto de clonación
+112
+Añadir al álbum
+305
+compartir
+Denuncia por infracción
+Miembros del proyecto
+https://oshwhub.com/esp-college/esp-echoear-base
+27/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+Lexin Little He…
+qrscxzxiaoliang
+Declaración de propiedad intelectual e instrucciones de reproducción
+Este es un proyecto de hardware de código abierto, y los derechos de propiedad
+intelectual asociados pertenecen a su creador. El creador sube este proyecto a esta
+plataforma únicamente con fines educativos, de comunicación e investigación para los
+usuarios, y no permite ningún uso comercial. Por favor, no lo utilice para la venta
+comercial ni con fines lucrativos. Si considera que este proyecto infringe sus derechos,
+haga clic en el botón "Reclamación por infracción" que aparece arriba y lo tramitaremos
+de acuerdo con las "Normas de reclamación y apelación por infracción" de JLCPCB.
+Por favor, verifique usted mismo la viabilidad del circuito al replicar el proyecto y
+determine si es adecuado para usted. Usted es responsable de cualquier consecuencia
+derivada de la replicación del proyecto. Bajo ninguna circunstancia esta plataforma será
+responsable de los daños directos o indirectos que usted pueda sufrir al replicar el
+proyecto debido a problemas de diseño del circuito en el proyecto de código abierto.
+在登录或注册后才可以进行评论操作
+全部评论（97） 按时间排序 | 按热度排序
+yf1987
+¿El encabezado no es de código abierto?
+2026-06-19 21:00:04
+Piso 50 Como
+Herrero impulsado por núcleos
+El proyecto Meow Companion Rotating Base recomendaba tres sensores geomag
+néticos. Dado que el BMM150 está descatalogado y existen versiones falsificadas, 
+optamos por el QMC6309. Este documento describe los pasos de compilación par
+a el sensor QMC6309 y proporciona un firmware precompilado; puede descargarl
+o si lo necesita.
+Guía de compilación de firmware para la base giratoria de Meow Companion
+responder
+https://oshwhub.com/esp-college/esp-echoear-base
+28/32
+2026-05-09 20:11:32 piso 49 Como2 responder
+w5751
+¿Cuándo publicarás el archivo del modelo 3D de la carcasa? ¡Te lo ruego!
+2026-05-08 20:47:06 piso 48 Como responder
+Herrero impulsado por núcleos El repositorio Gitee contiene https://gitee.c
+om/esp-friends/esp-vocat-base
+2026-05-09 20:15:29 Como responder
+chenqin6688
+¿Por qué mi teléfono se reinicia constantemente después de actualizar el firmwar
+e?
+2026-04-02 11:49:04 piso 47 Como responder
+kizunafaq
+¿Habrán ocultado la fuente de sonido? El micrófono no se ve por ninguna parte.
+2026-03-11 23:19:01 piso 46 Como responder
+luz de luna 2016
+¿Se puede usar esta base junto con otros artículos con temática de gatos? Porque 
+otros se reeditaron primero.
+2026-02-03 13:48:59 piso 45 Como responder
+lzdjjm0416
+¿Tienes archivos 3D?
+2026-02-01 17:21:43 piso 44 Como responder
+gzzz2008
+¿Cómo flasheo este firmware?
+¿No lo entendiste?
+2026-01-28 11:16:19 piso 43 Como1 responder
+Autor de Lexin Little Blacksmith El código fuente se ha publicado como 
+código abierto y está disponible en la documentación; puedes echarle 
+un vistazo.
+7/7/26, 21:56 ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+https://oshwhub.com/esp-college/esp-echoear-base 29/32
+2026-04-08 16:58:41 Como responder
+xiaoluo1912
+Vendo dos bases completamente ensambladas. Hice dos adicionales para proyect
+os personales. Las bases ya vienen ensambladas con la carcasa exterior. Solo hay 
+dos disponibles.
+2026-01-23 17:08:20 piso 42 Como responder
+xiaoluo1912 Envíame un mensaje directo si lo necesitas.
+23/01/2026 17:08:30 Como responder
+xiaoluo1912 Responder a @ xiaoluo1912: ID de WeChat: keman_578324
+7
+2026-01-23 17:09:11 Como responder
+waynelu v:waynelu, quiero comprar uno
+2026-01-26 15:03:35 Como responder
+ycrobina
+¿Se puede utilizar el firmware oficial para conectarse a Xiaozhi?
+2026-01-20 15:53:18 piso 41 Como responder
+1 2 3 4 5 Ir a Página
+7/7/26, 21:56 ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+https://oshwhub.com/esp-college/esp-echoear-base 30/32
+7/7/26, 21:56
+ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+31/32
+https://oshwhub.com/esp-college/esp-echoear-base
+Términos de
+la póliza
+Condiciones
+de servicio
+política de
+privacidad
+Acuerdo de
+licencia del
+proyecto
+Haz una
+contribución
+Expresiones
+de gratitud
+Versión del
+software
+Versión
+profesional
+Edición
+estándar
+Edición
+educativa
+Versión de
+implementación
+privada
+Solución
+Editor
+profesional
+Editor de la
+edición
+estándar
+Cliente de
+escritorio
+Interfaz
+API
+Formato
+del
+documento
+Ayuda
+Foro de
+usuarios
+Tutorial de la
+versión
+profesional
+Tutorial de la
+versión
+estándar
+Actualización
+de la versión
+profesional
+Actualización
+de la edición
+estándar
+sobre
+nosotros
+Presentación
+del equipo
+Informes
+relacionados
+Acerca de la
+empresa
+Contáctanos
+Cooperación
+y contacto
+Cuenta oficial
+de la EDA
+Cuenta
+pública de
+código
+abierto
+Grupo de
+discusión
+sobre
+hardware de
+código
+abierto
+Industria
+electrónica
+JLCPCB JLCPCB FPC JLCPCB SMT
+Malla de acero de
+Jialichuang
+Almohadillas
+calefactoras
+JLCPCB
+Embalaje de caja
+de papel
+personalizado
+Centro comercial
+LCSC
+ZXHPCB
+Presentación
+del grupo
+Correo
+electrónico del
+CEO
+Industria de
+maquinaria
+JLCPCB FA JLCPCB 3D JLCPCB CNC Centro comercial
+MRO
+Personalización
+del panel
+Carcasa de
+aleación de
+aluminio
+Software
+industrial
+JLCPCB EDA JLCIC Ican JLCPCB CAM JLCPCB DFM
+Visor de modelos
+3D
+ERP en la nube de
+JLC
+JLCPCB ECAD
+Otros
+servicios
+Comunidad de
+Jialichuang
+Sociedad de
+Innovación
+Extrema
+Plataforma de
+hardware de
+código abierto
+Diseño de JLCPCB
+Servicios de
+terceros
+Forface 3D Plataforma
+abierta JLCPCB
+Copyright © Shenzhen Chuangdian Youxuan Technology Co., Ltd. Número de registro ICP de Guangdong: 2026007863.
+Número de registro de seguridad de red de la Oficina de Seguridad Pública de Guangdong: 44030002004384.
+Número de licencia de operación comercial de telecomunicaciones de valor agregado: Guangdong B2-20201198.
+ISO/IEC Política de privacidad Acuerdo de usuario
+Acerca
+de
+JLCIC
+7/7/26, 21:56 ESP-VoCat 喵伴旋转底座 - 立创开源硬件平台
+https://oshwhub.com/esp-college/esp-echoear-base 32/32
